@@ -1,6 +1,9 @@
-# CTDL Space Conventions
+# CTDL Conventions
 
 This document describes how to create things in a predictable and consistent manner.
+
+Most of the things listed hire is borrowed from existing ones with a little tunning to feet our needs. 
+For an example: we use same single NodeJS version everywhere across servers and development machines so we can use convention based on this veriosn without requirement to support orders version.
 
 ## Naming 
 
