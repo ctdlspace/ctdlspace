@@ -17,5 +17,34 @@
 ## Properties Order
 
 ## Nesting
+- When writing LESS styles only one level of nesting is allowd.
+- Nesting styles is allowed only for the modificators
+
+Bad
+```
+.box {
+  &_header {
+    &_subheader {
+    
+    }
+  }
+  &__red {
+  
+  }
+}
+```
+
+Good
+```
+.box {
+  // box styles
+  &__red {}
+  &__green {}
+}
+
+.box_header {}
+
+.box_header_subheader {}
+```
 
 ## Mixins And Functions
