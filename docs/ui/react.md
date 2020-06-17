@@ -21,7 +21,7 @@ export function Component_subComponent(props) {
 
 ## Composition
 
-## Data Driven Components
+## [Data Driven Components](#data-driven-components) 
 Data-driven components are the components attended to render datasets. 
 
 - IMPORTANT: rule for all the data-driven components is that they only can be used where data is explicitly coming from the external data sources (databases, API's)
