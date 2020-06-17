@@ -16,7 +16,7 @@
 
 ## Properties Order
 
-## Nesting
+## [Nesting](#nesting)
 - When writing LESS styles only one level of nesting is allowd.
 - Nesting styles is allowed only for the modificators
 
