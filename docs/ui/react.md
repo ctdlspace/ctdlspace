@@ -3,7 +3,7 @@
 ## Components Naming
 - ComponentName is always in PascalCase, subComponent name is always in camelCase. Example: ComponentName_subComponentName
 - Underscore '\_' sets hard hierarchy. Which means that <ComponentName_subComponent/> have to always have <ComponentName/> as a direct parent. If strong hierachy is set this also means that parent can't accept other children except of based on hierarchy
-- Double Underscore  '\__' sets soft hierarchy. Which is means that <ComponentName__softSubComponent/> have to be somewere in <ComponentName/> tree but not neccessary directly. 
+- Underscore + UCFirst  '\_\[A-Z]{1}' sets soft hierarchy. Which is means that <ComponentName_SoftSubComponent/> have to be somewere in <ComponentName/> tree but not neccessary directly. 
 - Uppercase means extension / composition
 - Exportable components are real functions — becouse this way React show components name in the inspector
 
@@ -44,7 +44,7 @@ function FormAjax(props) {
 
 // Wrong - soft hierarchy is broken
 <div>
-  <Page__title>Title 1</Page_title>
+  <Page_Title>Title 1</Page_Title>
   <Page>
     <div className="wrapper"><Page_content>content</Page_content/</div>
   </Page>
@@ -52,9 +52,9 @@ function FormAjax(props) {
 
 // Wrone - you can use soft hierarchy elements everywhere under parent tree but Page have hard hierarchy defined so its cant accept Page__title anymore&
 <Page>
-  <Page__title>Title 1</Page__title>
+  <Page_Title>Title 1</Page_Title>
   <Page_content>
-    <Page__title>Title 2</Page__title>
+    <Page_Title>Title 2</Page_Title>
     content
     </Page_content/>
 </Page>
@@ -62,6 +62,17 @@ function FormAjax(props) {
 // Correct - you can use hard hierarchy elements directly under the parent
 <Page>
   <Page_content>content</Page_content/>
+</Page>
+
+// Correct 
+// - you can use hard hierarchy elements directly under the parent
+// - if parent have strong hierarchy set it can't contain anything except of defined children
+// - Page_Title is soft hierarchy element and can be used everywhere under Page tree
+<Page>
+  <Page_content>
+    <div className="pageTitleWrapper"><Page_Title>Page title</Page_Title></div>
+    content
+  </Page_content/>
 </Page>
 
 
