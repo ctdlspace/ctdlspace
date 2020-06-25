@@ -1,6 +1,6 @@
 # React Coding Convention
 
-## Components Naming
+## WIP: Components Naming
 - ComponentName is always in PascalCase, subComponent name is always in camelCase. Example: ComponentName_subComponentName
 - Underscore '\_' sets hard hierarchy. Which means that <ComponentName_subComponent/> have to always have <ComponentName/> as a direct parent. If strong hierachy is set this also means that parent can't accept other children except of based on hierarchy
 - Underscore + UCFirst  '\_\[A-Z]{1}' sets soft hierarchy. Which is means that <ComponentName_SoftSubComponent/> have to be somewere in <ComponentName/> tree but not neccessary directly. 
