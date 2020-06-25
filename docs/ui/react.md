@@ -37,12 +37,14 @@ function FormAjax(props) {
   return <Form onSubmit={forwarSubmitEvent}>{children}<div>
 }
 
-// Wrong - hard hierarchy is broken
+// Wrong 
+// - hard hierarchy is broken
 <Page>
   <div className="wrapper"><Page_content>content</Page_content></div>
 </Page>
 
-// Wrong - soft hierarchy is broken
+// Wrong 
+// - soft hierarchy is broken
 <div>
   <Page_Title>Title 1</Page_Title>
   <Page>
@@ -50,7 +52,9 @@ function FormAjax(props) {
   </Page>
 </div>
 
-// Wrone - you can use soft hierarchy elements everywhere under parent tree but Page have hard hierarchy defined so its cant accept Page__title anymore&
+// Wrong
+// - you can use soft hierarchy elements everywhere under parent tree 
+// - but Page have hard hierarchy defined so its cant accept Page_Title directly anymore
 <Page>
   <Page_Title>Title 1</Page_Title>
   <Page_content>
@@ -59,7 +63,8 @@ function FormAjax(props) {
     </Page_content/>
 </Page>
 
-// Correct - you can use hard hierarchy elements directly under the parent
+// Correct 
+// - you can use hard hierarchy elements directly under the parent
 <Page>
   <Page_content>content</Page_content/>
 </Page>
