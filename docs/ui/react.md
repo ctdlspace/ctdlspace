@@ -39,14 +39,14 @@ function FormAjax(props) {
 
 // Wrong - hard hierarchy is broken
 <Page>
-  <div className="wrapper"><Page_content>content</Page_content/</div>
+  <div className="wrapper"><Page_content>content</Page_content></div>
 </Page>
 
 // Wrong - soft hierarchy is broken
 <div>
   <Page_Title>Title 1</Page_Title>
   <Page>
-    <div className="wrapper"><Page_content>content</Page_content/</div>
+    <div className="wrapper"><Page_content>content</Page_content></div>
   </Page>
 </div>
 
@@ -75,12 +75,10 @@ function FormAjax(props) {
   </Page_content/>
 </Page>
 
-
-
 ```
 
 
-```
+```javascript
 export function Component(props) {
   const {} = props
   return (
