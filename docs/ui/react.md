@@ -18,7 +18,7 @@ function Page_content(props) {
   return <div>{children}<div>
 }
 
-function Component__title(props) {
+function Component_Title(props) {
   const {children} = props
   return <div>{children}<div>
 }
